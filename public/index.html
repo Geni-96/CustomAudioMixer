@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Mixer Client</title>
+</head>
+<body>
+  <h1>Audio Mixer Client</h1>
+  <button id="start">Start Streaming</button>
+  <button id="stop" disabled>Stop Streaming</button>
+  <button id="pause" disabled>Pause Mic</button>
+  <button id="resume" disabled>Resume Mic</button>
+  <audio id="mixedAudio" controls style="display:none;"></audio>
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
