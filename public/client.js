@@ -39,7 +39,8 @@ startBtn.onclick = async () => {
 };
 
 pauseBtn.onclick = () => {
-  if (stream) {
+  if (stream && input && workletNode) {
+    input.disconnect(workletNode);
     stream.getAudioTracks().forEach(track => track.enabled = false);
     pauseBtn.disabled = true;
     resumeBtn.disabled = false;
@@ -47,7 +48,8 @@ pauseBtn.onclick = () => {
 };
 
 resumeBtn.onclick = () => {
-  if (stream) {
+  if (stream && input && workletNode) {
+    input.connect(workletNode);
     stream.getAudioTracks().forEach(track => track.enabled = true);
     pauseBtn.disabled = false;
     resumeBtn.disabled = true;
